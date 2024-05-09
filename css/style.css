@@ -16,22 +16,26 @@ body{
     background-color: crimson;
 }
 
+.border-crimson{
+    border: 1px solid crimson;
+}
+
 /* STYLE */
-#app{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+/* #app{
+
+} */
+
+
+.title{
+    text-align: center;
+    padding: 30px;
 }
 
 /* Header */
 
-.header{
-    flex-shrink: 0;
-}
-
 .app-header{
     padding: 30px 0;
-    background-color: crimson;
+    background-color: coral;
     color: white;
 }
 
@@ -43,18 +47,11 @@ body{
 
 /* Main */
 
-main{
-    flex-grow: 1;
-    overflow-y: scroll;
-}
 
 .films-section{
     height: 100%;
-    background-color: rgb(200, 200, 200);
+    background-color: rgb(31, 31, 31);
 }
 
 /* Footer */
 
-footer{
-    flex-shrink: 0;
-}

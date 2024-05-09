@@ -3,7 +3,23 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            title: 'PHP OOP'
+            title: 'PHP OOP',
+            films: [],
         }
+    },
+
+
+    created(){
+        this.fetchData();
+    },
+
+
+    methods:{
+        fetchData(){
+            axios.get('./server.php').then((res) => {
+				this.films = res.data.results
+                console.log(this.films)
+			})
+        },
     }
 }).mount('#app')
