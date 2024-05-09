@@ -21,6 +21,11 @@ body{
 }
 
 /* Header */
+
+.header{
+    flex-shrink: 0;
+}
+
 .app-header{
     padding: 30px 0;
     background-color: crimson;
@@ -36,11 +41,17 @@ body{
 /* Main */
 
 main{
-    height: 100%;
     flex-grow: 1;
+    overflow-y: scroll;
 }
 
 .films-section{
     height: 100%;
     background-color: rgb(200, 200, 200);
+}
+
+/* Footer */
+
+footer{
+    flex-shrink: 0;
 }
