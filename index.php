@@ -60,6 +60,18 @@ $film_7 = new Production('Il sesto Film', 'Elfico', 6);
 
 $film_8 = new Production('Un film brutto', 'Incomprensibile', 1);
 
+// Array contenente tutti i film
+$films = 
+[
+    $film_1,
+    $film_2,
+    $film_3,
+    $film_4,
+    $film_5,
+    $film_6,
+    $film_7,
+    $film_8
+];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -82,16 +94,25 @@ $film_8 = new Production('Un film brutto', 'Incomprensibile', 1);
         <section class="films-section py-5">
             <div class="container">
                 <div class="row g-5">
-                    <div class="col-3">
-                        <div class="card px-2 py-5 text-bg-dark">
-                            <div class="card-body">
-                                <h5 class="card-title text-center text-crimson"><?php echo $film_1->title ?></h5>
-                                <p class="card-text py-4">Lingua: <?php echo $film_1->language ?></p>
-                                <p class="card-text">Voto: <?php echo $film_1->vote ?></p>
-                            </div>
-                        </div>                       
-                    </div>
+                    <?php foreach($films as $film)
+                    {
+                        ?>
+                        <div class="col-3">
+                            <div class="card px-2 py-5 text-bg-dark">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center text-crimson"><?php echo $film->title ?> </h5>
+                                    <p class="card-text py-4">Lingua:<?php echo $film->language ?> </p>
+                                    <p class="card-text">Voto: <?php echo $film->vote ?></p>
+                                </div>
+                            </div>                       
+                        </div>
+                        <?php
+                    }?>
+                        
+               
                     
+                    
+                    <!--                     
                     <div class="col-3">
                         <div class="card px-2 py-5 text-bg-dark">
                             <div class="card-body">
@@ -160,7 +181,7 @@ $film_8 = new Production('Un film brutto', 'Incomprensibile', 1);
                                 <p class="card-text">Voto: <?php echo $film_8->vote ?></p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
