@@ -28,6 +28,8 @@ $film_7 = new Production('Il sesto Film', 'Elfico', 6, new Genre('Horror, Comico
 $film_8 = new Production('Un film brutto', 'Incomprensibile', 2, new Genre('Aaaaa','Lorem ipsum dolor sit amet, consectetur adipisicing elit!'));
 list($result, $message) = $film_8->setVote(1);
 
+$film_9 = new Production('Un film Molto Bello', 'Tutte quante', 10, new Genre('Inconcepibile', 'descrizione!!!!!!!!!'));
+
 $films = 
 [
     $film_1,
@@ -37,7 +39,8 @@ $films =
     $film_5,
     $film_6,
     $film_7,
-    $film_8
+    $film_8,
+    $film_9
 ];
 
 return $films;

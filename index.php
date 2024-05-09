@@ -46,7 +46,7 @@ $movies = require_once __DIR__ . '/db.php';
                                         <p class="card-text py-4">Lingua:<?php echo $film->language ?> </p>
                                         <p class="card-text">Voto: <?php echo $film->vote ?></p>
                                         <p class="card-text">Genere: <?php echo $film->genre->name ?></p>
-                                        <p class="card-text">Descrizione:</p>
+                                        <p class="card-text text-crimson">Descrizione:</p>
                                         <p class="card-subtitle"><?php echo $film->genre->description ?></p>
                                     </div>
                                 </div>
@@ -71,7 +71,7 @@ $movies = require_once __DIR__ . '/db.php';
                                     <p class="card-text py-4">Lingua: {{film.language}}</p>
                                     <p class="card-text">Voto: {{film.vote}}</p>
                                     <p class="card-text">Genere: {{film.genre.name}}</p>
-                                    <p class="card-text">Descrizione:</p>
+                                    <p class="card-text text-success">Descrizione:</p>
                                     <p class="card-subtitle">{{film.genre.description}}</p>
                                 </div>
                             </div>
