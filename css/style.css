@@ -2,6 +2,19 @@ body{
     background-color: rgb(225, 225, 225);
 }
 
+/* Utility */
+
+.text-crimson{
+    color: crimson;
+}
+
+
+/* STYLE */
+#app{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
 /* Header */
 .app-header{
@@ -17,3 +30,13 @@ body{
 
 
 /* Main */
+
+main{
+    height: 100%;
+    flex-grow: 1;
+}
+
+.films-section{
+    height: 100%;
+    background-color: rgb(200, 200, 200);
+}
