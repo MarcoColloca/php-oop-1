@@ -62,8 +62,16 @@ var_dump($film_onore_dei_ladri);
 <body>
     
 <div id="app">
+    <header class="app-header">
+        <nav>
+            <div class="app-header__title">
+                <h1>
+                    {{ title }}
+                </h1>
+            </div>
+        </nav>
+    </header>
     
-    {{ message }}
 
 
 </div>

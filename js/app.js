@@ -3,7 +3,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            message: 'Hello Vue!'
+            title: 'PHP OOP'
         }
     }
 }).mount('#app')

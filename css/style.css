@@ -1,3 +1,19 @@
 body{
-    background-color: rgb(153, 153, 153);
+    background-color: rgb(225, 225, 225);
 }
+
+
+/* Header */
+.app-header{
+    padding: 30px 0;
+    background-color: crimson;
+    color: white;
+}
+
+.app-header__title{
+    text-align: center;
+}
+
+
+
+/* Main */
