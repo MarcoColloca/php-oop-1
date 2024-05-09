@@ -74,16 +74,10 @@ $film_8 = new Production('Un film brutto', 'Incomprensibile', 1);
 <body>
     
 <div id="app">
-    <header class="app-header">
-        <nav>
-            <div class="app-header__title">
-                <h1>
-                    {{ title }}
-                </h1>
-            </div>
-        </nav>
-    </header>
+
+    <?php include __DIR__ . '/components/header.php'; ?>
     
+
     <main>
         <section class="films-section py-5">
             <div class="container">
@@ -172,6 +166,7 @@ $film_8 = new Production('Un film brutto', 'Incomprensibile', 1);
         </section>
     </main>
 
+    <?php include __DIR__ . '/components/footer.php'; ?>
 </div>
 
  <script src="./js/app.js"></script>
