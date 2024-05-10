@@ -34,4 +34,20 @@ class Production
             return [false, "Attento $vote non è un parametro consentito. Devi utilizzare un numero da 1 a 10."];
         }
     }
+
+    function getVote(): int {
+        return $this->vote;
+    }
+
+    function getProfitti(): int {
+        return -1;
+    }
+
+    function getDurata(): int {
+        return -1;
+    }
+
+    function getAdditionalData() {
+        return [];
+    }
 }

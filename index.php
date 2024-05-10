@@ -45,10 +45,11 @@ $movies = require_once __DIR__ . '/db.php';
                                         <h5 class="card-title text-center text-crimson"><?php echo $film->title ?> </h5>
                                         <p class="card-text py-4">Lingua: <?php echo $film->language ?> </p>
                                         <p class="card-text">Voto: <?php echo $film->vote ?></p>
-                                        <?php if($film->profitti && $film->durata):?>
-                                            <p class="card-text">Profitti: <?php echo $film?->profitti ?> €</p>
-                                            <p class="card-text">Durata: <?php echo $film->durata ?> minuti </p>
-                                        <?php endif; ?>
+                                        <?php foreach($film->getAdditionalData() as $key => $value): ?>
+                                            <p class="card-text"> 
+                                                <?= $key ?>: <?php echo $value ?> <?php if( $key === 'profitti'):?> € <?elseif($key === 'durata'):?> minuti <?php endif; ?>
+                                            </p>
+                                        <?php endforeach; ?>
                                         <p class="card-text">Genere: <?php echo $film->genre->name ?></p>
                                         <p class="card-text text-crimson">Descrizione:</p>
                                         <p class="card-subtitle"><?php echo $film->genre->description ?></p>

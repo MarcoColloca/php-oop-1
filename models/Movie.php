@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/Production.php';
+require_once __DIR__ . '/Genre.php';
 
 class Movie extends Production
 {   
@@ -16,5 +17,20 @@ class Movie extends Production
         $this->profitti = $_profitti;
         $this->durata = $_durata;
 
+    }
+
+    function getProfitti(): int {
+        return $this->profitti;
+    }
+
+    function getDurata(): int {
+        return $this->durata;
+    }
+
+    function getAdditionalData() {
+        return [
+            'profitti' => $this->profitti,
+            'durata' => $this->durata,
+        ]; 
     }
 }
