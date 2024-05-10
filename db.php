@@ -1,5 +1,7 @@
 <?php
 include_once __DIR__ . '/models/Production.php';
+include_once __DIR__ . '/models/Movie.php';
+include_once __DIR__ . '/models/TVSerie.php';
 
 // Qui andrò a creare i due oggetti, istanze della classe production.
 
@@ -10,7 +12,6 @@ $production_2 = new Production('Lo Hobbit', 'Inglese', 9, new Genre('Azione','Lo
 
 
 $production_3 = new Production('L\'onore dei ladri', 'Marziano', 8, new Genre('Azione, Fantasy','Lorem ipsum dolor sit amet, consectetur adipisicing elit!'));
-
 
 
 $production_4 = new Production('Il film che non esiste', 'Nessuna', 1, new Genre('Vuoto','Lorem ipsum dolor sit amet, consectetur adipisicing elit!'));
@@ -30,6 +31,13 @@ list($result, $message) = $production_8->setVote(1);
 
 $production_9 = new Production('Un film Molto Bello', 'Tutte quante', 10, new Genre('Inconcepibile', 'descrizione!!!!!!!!!'));
 
+
+
+$movie_1 = new Movie('Questo è un film', 'Italiano', 10, new Genre('Film Carino', 'descrizione!!!!!!!!!'), 15000, 138);
+
+$SerieTv_1 = new TVSerie('Questa è una Serie Tv', 'Italiano', 10, new Genre('Serie Tv bella', 'descrizione!!!!!!!!!'), 24);
+
+
 $films = 
 [
     $production_1,
@@ -40,7 +48,9 @@ $films =
     $production_6,
     $production_7,
     $production_8,
-    $production_9
+    $production_9,
+    $movie_1,
+    $SerieTv_1
 ];
 
 return $films;
